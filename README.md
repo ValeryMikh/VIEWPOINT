@@ -1,4 +1,4 @@
-## VIEWPOINT is an innovative multi-model platform for backend developers, with a powerful ViewQL language for queries and modeling, created specifically for backend developers.
+## VIEWPOINT is an innovative multi-model platform for backend developers, with a powerful ViewQL language for queries and modeling, created specifically for backend developers. (Multi-Model Database Management System)
 VIEWPOINT provides the ability to work with different data models (relational, graph, document and others) within a single system. This eliminates the need to use several different DBMS and simplifies integration with various data sources. <br> For backend developers, this means greater flexibility in choosing the most suitable model for a specific task and simplification of working with heterogeneous data.
 ## ViewQL 
 ViewQL provides backend developers with a powerful and convenient tool for working with data. <BR> This query and modeling language combines the capabilities of SQL and programming languages, which allows backend developers to write complex queries, implement business logic directly in the database and create complex data models. <BR> This increases productivity and simplifies development.
@@ -8,7 +8,8 @@ BROKER services provide request routing and interaction between data models. <BR
 services provide request routing and interaction between data models. <BR> For Backend developers, this means the ability to build complex systems in the cloud, where different parts of the application can use the most appropriate data models and exchange data via BROKER.
 ## ADMIN IDE
 ADMIN IDE - a tool for creating data models, writing queries and managing the system simplifies the work of Backend developers and allows them to focus on solving business problems.
-
+## REPOSITORY
+REPOSITORY is the key component of VIEWPOINT responsible for physical data storage. It implements a columnar storage model, providing high performance for analytical queries.
 ## The VIEWPOINT platform can be successfully applied in various areas, including:
 * __Internet of Things (IoT).__ VIEWPOINT, as a multi-model platform, has a number of characteristics that make it attractive for use in the context of the Internet of Things (IoT), especially for data collection, processing and device management.
 * __E-commerce.__ Creating personalized recommender systems is a promising direction, given the multi-model nature of the platform and the capabilities of the ViewQL language
