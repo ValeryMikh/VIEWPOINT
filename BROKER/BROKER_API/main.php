@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -39,4 +39,4 @@ function broker(){
 	$broker->broker_query($query);
 	exit; 
 }
-">
+?>

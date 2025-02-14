@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -38,7 +38,7 @@ define('_RELATION','RELATION');
 define('_POINTER','POINTER');
 
 define('_FINAL','FINAL');
-">
+?>
 
 
 

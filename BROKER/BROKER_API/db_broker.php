@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -326,7 +326,7 @@
 		////////////////////////////// 	PARSING POST	///////////////////////////////
 		/*
 		// SITE	
-		<FORM ACTION=' <"php $action"> 'METHOD='POST'>	
+		<FORM ACTION=' <?php $action?> 'METHOD='POST'>	
 		<TABLE ALIGN="LEFT" BORDER="0" CELLSPACING="1" CELLPADDING="1">
 			<TR><TD><P ALIGN='CENTER'>FORM</P></TD></TR>
 			<TR>
@@ -373,4 +373,4 @@
 		
 	
 	}//EndClass
- ">
+ ?>

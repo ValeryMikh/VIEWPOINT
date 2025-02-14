@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -18,4 +18,4 @@
 
 include_once( "db_broker.php");
 include_once( "main.php");
-">
+?>

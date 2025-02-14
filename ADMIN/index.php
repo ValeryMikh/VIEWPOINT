@@ -1,4 +1,4 @@
-<"php
+<?php
 session_start();
 ########################################################
 #    Copyright 2024 Valery Mikhailovski. 
@@ -62,25 +62,25 @@ session_start();
 			$_SESSION["USER"]= $password;
 			$_SESSION[$password]="";
 			
-">			
+?>			
 			<SCRIPT LANGUAGE="JavaScript" TYPE="Text/JavaScript">
-				location.href='<"php echo strtolower("./ADMIN.PHP")">';
+				location.href='<?php echo strtolower("./ADMIN.PHP")?>';
 			</SCRIPT>
-<"php	
+<?php	
 		}else{
 			show_form_access();
 	}
 	
 	function show_form_access(){
 		$action=$_SERVER['PHP_SELF'];
-	">
+	?>
 		<!DOCTYPE html>
 		<html>
 			<head> 
 			 		 <meta charset ="utf-8">
 			 </head>
 			 <body>
-				<FORM ACTION=' <"php $action"> ' METHOD='POST'>
+				<FORM ACTION=' <?php $action?> ' METHOD='POST'>
 				<TABLE ALIGN="LEFT" BORDER="0" CELLSPACING="1" CELLPADDING="1">
 					<TR><TD><P ALIGN='CENTER'>Password in.</P></TD></TR>
 					<TR><TD><input type="password" NAME="CODE" placeholder ="Enter password" SIZE="32"></TD></TR>
@@ -93,9 +93,9 @@ session_start();
 				</FORM>
 		</body>
 		</html>
-	<"php
+	<?php
 		exit;
 	}
-	">
+	?>
 </body>
 </html>

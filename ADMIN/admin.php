@@ -1,4 +1,4 @@
-<"php
+<?php
 session_start();
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
@@ -109,4 +109,4 @@ session_start();
 		
 	$_SESSION[$password]=serialize($admin);
 	exit; 
-">
+?>

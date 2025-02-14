@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -637,4 +637,4 @@ function show_list_objects_of_class($name_class)
 			return array($name_class,$name_interface);
 	}
   }//end class
-">
+?>

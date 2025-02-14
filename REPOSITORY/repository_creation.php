@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -66,14 +66,14 @@
 
 	function show_form_access(){
 		$action=$_SERVER['PHP_SELF'];
-	">	
+		?>	
 		<!DOCTYPE html>
 		<html>
 		 <head>
 		  <meta charset ="utf-8">
 		 </head>
 		 <body>
-			<FORM ACTION=' <"php $action"> 'METHOD='POST'>	
+			<FORM ACTION=' <?php $action?> 'METHOD='POST'>	
 			<TABLE ALIGN="LEFT" BORDER="0" CELLSPACING="1" CELLPADDING="1">
 				<TR><TD><P ALIGN='CENTER'>Password in.</P></TD></TR>
 				<TR>
@@ -89,9 +89,9 @@
 			</FORM>
 		</body>
 		</html>
-	<"php
+	<?php
 	exit; 	
 	}
-	">
+	?>
 </body>
 </html>

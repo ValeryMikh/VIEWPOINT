@@ -1,6 +1,6 @@
-<"php	
+<?php	
 ########################################################
-#    Copyright 2024 Valery Mikhailovski.
+#    Copyright  2010-2022 by Valery Mikhailovski
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -13,7 +13,7 @@
 # 	 See the GNU General Public License for more details.
 #
 #    You should have received a copy of the GNU General Public License
-#   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ########################################################
 ########################
 #	           Agent   ADMIN		      #
@@ -154,39 +154,39 @@
 	function show_form_admin(){
 	################
 		$action=$_SERVER['PHP_SELF'];
-	">
+	?>
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 	<HTML>
 	<HEAD>
-	<"php
-		if($this->language=="RU"){">
+	<?php
+		if($this->language=="RU"){?>
 		<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
-	<"php
-		}else{">
+	<?php
+		}else{?>
 		<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1255">
-	<"php
-		}">
+	<?php
+		}?>
 	</HEAD>
-		<LINK REL="STYLESHEET" HREF="<"php echo strtolower('../../DATA/MYSTYLE.CSS') ">" TYPE="TEXT/CSS">
+		<LINK REL="STYLESHEET" HREF="<?php echo strtolower('../../DATA/MYSTYLE.CSS') ?>" TYPE="TEXT/CSS">
 	<BODY>
 
-  <FORM ACTION="<"php echo $action ">" METHOD="POST" >	
+  <FORM ACTION="<?php echo $action ?>" METHOD="POST" >	
 	<TABLE  ALIGN="CENTER" WIDTH="100%" BORDER="1" CELLSPACING="5" CELLPADDING="5"> 	
   	<TR><TD ALIGN="CENTER" COLSPAN="3">
-	<p align="center"><strong>VIEWPOINT</strong></p> 	
+	<p align="center"><strong>GRAPH &nbsp;&nbsp; DATABASE </strong></p> 	
 	<strong>VISUAL&nbsp;  INTEGRATED&nbsp;  DEVELOPMENT &nbsp;ENVIRONMENT &nbsp;AND&nbsp; ADMINISTRATION</strong>
 	</TD></TR> 
 	<TR>
 		<TD VALIGN="TOP">
 <!--  LIST ALL CONTAINERS,VIEW S,CLASSES  -->
-	<"php
+	<?php
 		print "</FONT></LI>";	
 		print "<BR>";	 
 		if($list_classes=$this->get_type_class("VIEW ")){
 			print "<B><FONT SIZE='-1'>VIEWS:</B></FONT><BR>";	
 			foreach($list_classes as $name => $id){
 				if($id)
-				  print"<A HREF='$action"EVEN_TYPE_CLASS=$name'><LI><FONT SIZE='-2'>$name ($id)</FONT></LI></A>";
+				  print"<A HREF='$action?EVEN_TYPE_CLASS=$name'><LI><FONT SIZE='-2'>$name ($id)</FONT></LI></A>";
 			}
 			print "<BR>";
 		}
@@ -194,11 +194,11 @@
 			print "<B><FONT SIZE='-1'>TABLES:</B></FONT><BR>";	//CLASSES
 			foreach($list_classes as $name => $id){
 				if($id)
-					print"<A HREF='$action"SELECT_CLASS=$name'><LI><FONT SIZE='-2'>$name ($id)</FONT></LI></A>";// ! EVEN_TYPE_CLASS($name)!'
+					print"<A HREF='$action?SELECT_CLASS=$name'><LI><FONT SIZE='-2'>$name ($id)</FONT></LI></A>";// ! EVEN_TYPE_CLASS($name)!'
 			}
 			print "<BR>";
 		}
-	">
+	?>
 		</TD >	
 <!--  WINDOW INPUT QUERY-->
 		<TD ALIGN= "CENTER"  ><!--VALIGN="TOP"-->
@@ -211,7 +211,7 @@
 		<BR><BR></TD>
 		<TD  VALIGN="TOP">
 <!--  LIST ALL COMPONENTS, CONTAINERS -->			
-	<"php	
+	<?php	
 		if($list_classes=$this->get_type_class("COMPONENT")){
 			//print "<B><FONT SIZE='-1'>COMPONENTS:</B></FONT><BR>";	
 			foreach($list_classes as $name => $id){
@@ -223,11 +223,11 @@
 			print "<B><FONT SIZE='-1'>CONTAINERS:</B></FONT><BR>";	
 			foreach($list_classes as $name => $id){
 				if($id)
-					print"<A HREF='$action"EVEN_TYPE_CLASS=$name'><LI><FONT SIZE='-2'>$name ($id)</FONT></LI></A>";
+					print"<A HREF='$action?EVEN_TYPE_CLASS=$name'><LI><FONT SIZE='-2'>$name ($id)</FONT></LI></A>";
 			}
 			print "<BR>";
 		}		
-	">
+	?>
 		</TD>	
 	</TR>
   </TABLE>
@@ -237,11 +237,11 @@
    <TABLE  ALIGN="CENTER" WIDTH="95%"  BORDER="1" CELLSPACING="5" CELLPADDING="5"> 	
 	  <TR>
 		<TD>
-			<"php 
+			<?php 
 			if($this->str_show){
 				print $this->str_show;
 			}
-			">	
+			?>	
 		</TD>	
 	  </TR>
   </TABLE> 
@@ -250,7 +250,7 @@
   <TABLE  ALIGN="CENTER" WIDTH="95%" BORDER="1" CELLSPACING="5" CELLPADDING="5"> 	
   <TR>
     <TD>		
-	<"php	
+	<?php	
 	if($this->type_class=="COMPONENT"||$this->type_class=="CONTAINER"||$this->type_class=="VIEW"){
 		$query="SHOW $this->type_class $this->name_type";
 		$this->dbpl_query($query);
@@ -267,40 +267,40 @@
 		$this->arrrows=array();//anser
 		$this->arr_query=array();//query
 	}
-">			
+?>			
 	</TD>	
   </TR>
   </TABLE> 
 <!-- THE SELECTED CASS --> 
-<"php		
+<?php		
 	if(!empty($this->class) && !$this->type_class && !$this->flg_query){
-">											 
-  <FONT SIZE='-1'><B>&nbsp;&nbsp;&nbsp;&nbsp;CURRENT TABLE:</B>&nbsp;&nbsp;&nbsp;&nbsp<"php echo $this->class->class_name"></FONT>   
+?>											 
+  <FONT SIZE='-1'><B>&nbsp;&nbsp;&nbsp;&nbsp;CURRENT TABLE:</B>&nbsp;&nbsp;&nbsp;&nbsp<?php echo $this->class->class_name?></FONT>   
   <TABLE  ALIGN="CENTER" WIDTH="95%" BORDER="1" CELLSPACING="2" CELLPADDING="2"> 	
   <TR>
   	<TD>
-<"php
+<?php
 		print "<FONT SIZE='-1'><B>VIEWS:</B>";
 		if($arr_interface=$this->class->info_interface()){
 				foreach($arr_interface as $nn=>$name){
 					print "<BR>&nbsp;&nbsp;&nbsp;&nbsp;";
-					print "<A HREF='$action"SET_VIEW=$name'>$name</A>";///old
+					print "<A HREF='$action?SET_VIEW=$name'>$name</A>";///old
 				}
 		}
 		print "</FONT><BR>";
-">
+?>
 	</TD>	
   </TR>
   </TABLE>
 <!-- THE SELECTED VIEW -->
-                        <"php 	
+                        <?php 	
 		if($this->class->interface_name && $this->class->interface_name!=$this->class->class_name ){	
-">
-<FONT SIZE='-1'><B>&nbsp;&nbsp;&nbsp;&nbsp;CURRENT  VIEW:</B>&nbsp;&nbsp;&nbsp;&nbsp<"php echo $this->class->interface_name "></FONT>   
+?>
+<FONT SIZE='-1'><B>&nbsp;&nbsp;&nbsp;&nbsp;CURRENT  VIEW:</B>&nbsp;&nbsp;&nbsp;&nbsp<?php echo $this->class->interface_name ?></FONT>   
   <TABLE  ALIGN="CENTER" WIDTH="95%" BORDER="1" CELLSPACING="5" CELLPADDING="5"> 	
   <TR>
   	<TD>	
-<"php
+<?php
 			$query_class="SELECT ID THIS ";
 			//$query_class="SELECT ID FROM ". $this->class->get_name_interface();
 			if($arr_anser=$this->dbpl_query($query_class)){
@@ -318,29 +318,29 @@
 							$short_id_item= substr($id_item,$len-7,$len);	
 						else
 							$short_id_item=$id_item; 
-						print" <A HREF='$action"SET_OBJECT=$id_item'> $short_id_item;</A>";
+						print" <A HREF='$action?SET_OBJECT=$id_item'> $short_id_item;</A>";
 					}
 					elseif(in_array($id_item,$this->arr_obj_relation))
-					 	print" <A HREF='$action"SET_OBJECT=$id_item'> $id_item;</A>";
+					 	print" <A HREF='$action?SET_OBJECT=$id_item'> $id_item;</A>";
 					else
 						print" $id_item; ";
 				}
 			}
 			print "</FONT><BR>";
-">
+?>
 	</TD>
   </TR>
  </TABLE>
 <!-- THE SELECTED OBJECT -->
-<"php
+<?php
 			if($this->class->id_object && $this->class->id_object!=$this->class->id_class && $arr_rows_extends=$this->class->info_extends()){
-">		  
-	<B><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;CURRENT  RECORD:</FONT></B>&nbsp;&nbsp;&nbsp;&nbsp;<"php echo $this->class->id_object"><BR>	
+?>		  
+	<B><FONT SIZE='-1'>&nbsp;&nbsp;&nbsp;&nbsp;CURRENT  RECORD:</FONT></B>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $this->class->id_object?><BR>	
 
   <TABLE  ALIGN="CENTER" WIDTH="95%" BORDER="1" CELLSPACING="5" CELLPADDING="5"> 	  
   <TR>
   	<TD height="30">
-	<"php
+	<?php
 				print "<B><FONT SIZE='-1'>CURRENT NODE </B>";// (echo $this->class->interface_name."<B> , </B>".$this->class->id_object."<B>)</B>";
 				//print "<BR>";				 
 				//print "<FONT SIZE='-1'><B>PROPERTIES:</B>";
@@ -353,7 +353,7 @@
 						else
 							$str_option=$name_component;//."[*]";
 						print("&nbsp;&nbsp;&nbsp;&nbsp"); 
-						print ("<A HREF='$action"QUERY=SELECT($str_option);;'>$name_component</A>");
+						print ("<A HREF='$action?QUERY=SELECT($str_option);;'>$name_component</A>");
 						print(" = ");
 						if(!empty($myrow["Protection"]))//PRIVATE
 							print " ( ".$myrow["Protection"]." ) ";
@@ -377,30 +377,30 @@
 						$icon="<-";
 					}elseif($str_icon=="DIRECT" || $str_icon=="FEEDBACK" ){ 
 						$icon="<->";
-						print("&nbsp;&nbsp;&nbsp;&nbsp"); print ("<A HREF='$action"QUERY=SELECT  $icon  (ID) $name_interface_item;;'>Current Node  $icon  $name_interface_item</A>  <BR>");					
+						print("&nbsp;&nbsp;&nbsp;&nbsp"); print ("<A HREF='$action?QUERY=SELECT  $icon  (ID) $name_interface_item;;'>Current Node  $icon  $name_interface_item</A>  <BR>");					
 						continue;
 					}elseif($str_icon=="CHILDREN"){
 						
 						$str_icon= "SOURCE";
 						$icon="->";
-						//print("&nbsp;&nbsp;&nbsp;&nbsp"); print ("<A HREF='$action"QUERY=SELECT  PATH  (ID) $name_interface_item ;;'> C.N. $icon </A>   <BR>");		//$name_interface_item PATH 
+						//print("&nbsp;&nbsp;&nbsp;&nbsp"); print ("<A HREF='$action?QUERY=SELECT  PATH  (ID) $name_interface_item ;;'> C.N. $icon </A>   <BR>");		//$name_interface_item PATH 
 					}else
 						return 0;
-					print("&nbsp;&nbsp;&nbsp;&nbsp"); print ("<A HREF='$action"QUERY=SELECT  $icon  (ID) $name_interface_item ;;'>Current Node $icon </A>  <BR>");	//. $str_icon."(CURENT)"//$name_interface_item
+					print("&nbsp;&nbsp;&nbsp;&nbsp"); print ("<A HREF='$action?QUERY=SELECT  $icon  (ID) $name_interface_item ;;'>Current Node $icon </A>  <BR>");	//. $str_icon."(CURENT)"//$name_interface_item
 				}
 
 			}
 		}		
 	}
-">
+?>
 	</TD>	
   </TR>
   </TABLE>  
 <p style="font-size: 12px;" align="center"> Copyright
-"&nbsp;&nbsp; 2010-2021 All rights reserved.<br />
+�&nbsp;&nbsp; 2010-2021 All rights reserved.<br />
 </BODY>
 </HTML>
-<"php
+<?php
 	}
 }//END CLASS	
-">
+?>

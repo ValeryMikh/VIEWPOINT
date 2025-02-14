@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -2405,5 +2405,4 @@ SEARCH GENRE_PHOTO,GENRE_PHOTO.Code,GENRE_PHOTO.Name[EN],GENRE_PHOTO.Name[RU] FR
 	
 	 }
 	 */
-">
-  
+?>

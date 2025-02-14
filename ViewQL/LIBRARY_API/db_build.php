@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -618,4 +618,4 @@ echo $name_interface_extend."==".$name_interface ."==". $flg_relation;
 		
 	}//end class
 	
-">
+?>

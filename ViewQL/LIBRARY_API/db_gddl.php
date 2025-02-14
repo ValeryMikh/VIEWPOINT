@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -454,4 +454,4 @@
 			return $this->is_select_query($query);}
 		}
 }//EndClass		
-">
+?>

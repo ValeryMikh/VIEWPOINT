@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -175,6 +175,5 @@
 			return 0;				
 		}
 	
-	}//end class
-		
-">
+	}//end class		
+?>

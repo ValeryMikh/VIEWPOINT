@@ -1,4 +1,4 @@
-<"php
+<?php
 ########################################################
 #    Copyright 2024 Valery Mikhailovski.
 #
@@ -34,4 +34,4 @@ include_once( strtolower("DB_SQL.php"));//db_sql
 include_once( strtolower("DB_CLASS.php"));//db_class
 include_once( strtolower("DB_GDDL.php"));//DB_DBPL
 include_once( strtolower("DB_REPOSITORY_BUILDER.php"));//
-">
+?>
